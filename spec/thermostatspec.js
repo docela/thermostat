@@ -10,7 +10,7 @@ describe("A Thermostat", function () {
     });
 
     it("increases the temperature", function () {
-        thermostat.temp_up(32);
-        expect(thermostat.temperature).toEqual(32);
+        thermostat.temp_up(5);
+        expect(thermostat.temperature).toEqual(25);
     });
 });

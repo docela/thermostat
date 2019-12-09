@@ -3,6 +3,6 @@ class Thermostat {
         this.temperature = 20;
     }
     temp_up(temp) {
-        this.temperature = temp;
+        this.temperature += temp;
     }
 }
