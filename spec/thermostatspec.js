@@ -5,17 +5,22 @@ describe("A Thermostat", function () {
         thermostat = new Thermostat();
     });
 
-    it("default temperature setting is 20 degrees", function () {
+    it("Default temperature setting is 20 degrees", function () {
         expect(thermostat.temperature).toEqual(20);
     });
 
-    it("increases the temperature", function () {
+    it("Increases the temperature", function () {
         thermostat.temp_up(5);
         expect(thermostat.temperature).toEqual(25);
     });
 
-    it("decreases the temperature", function () {
+    it("Decreases the temperature", function () {
         thermostat.temp_down(5);
         expect(thermostat.temperature).toEqual(15);
+    });
+
+    it("Minimum temperature is 10", function () {
+        thermostat.temp_down(11);
+        expect(thermostat.temperature).toEqual(10);
     });
 });
