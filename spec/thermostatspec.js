@@ -23,4 +23,17 @@ describe("A Thermostat", function () {
         thermostat.temp_down(11);
         expect(thermostat.temperature).toEqual(10);
     });
+
+    it("Power saving mode is on by default", function () {
+        expect(thermostat.power_saving_mode).toBe(true);
+    });
+
+    it("If power saving mode is on, the maximum temperature to be 25", function () {
+        expect(thermostat.max_temp).toEqual(25);
+    });
+
+    it("If power saving mode is off, the maximum temperature to be 32", function () {
+        thermostat.power_saving_off();
+        expect(thermostat.max_temp).toEqual(32);
+    });
 });
