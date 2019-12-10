@@ -37,4 +37,9 @@ class Thermostat {
         this.power_saving_mode = false;
         this.max_temp = 32;
     }
+
+    reset() {
+        this.temperature = 20;
+        return "The thermostat has been reset to the default temperature of 20 degrees."
+    }
 }
