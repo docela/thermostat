@@ -41,4 +41,11 @@ describe("A Thermostat", function () {
         thermostat.reset();
         expect(thermostat.temperature).toEqual(20);
     });
+
+    it("Turns power saving mode on", function(){
+        thermostat.power_saving_off();
+        thermostat.temp_up(12);
+        thermostat.power_saving_on();
+        expect(thermostat.temperature).toEqual(25);
+    });
 });
