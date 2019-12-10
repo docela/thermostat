@@ -28,7 +28,7 @@ class Thermostat {
 
         if (this.temperature < this.min_temp) {
             this.temperature = this.min_temp
-            return "The temperature cannot be lower than 10 degrees, which it will now bw set to.";
+            return "The temperature cannot be lower than 10 degrees, which it will now be set to.";
         }
 
         return `The temperature is now ${this.temperature} degrees.`;
@@ -47,6 +47,18 @@ class Thermostat {
         if (this.power_saving_mode === true && this.temperature > this.max_temp) {
             this.temperature = this.max_temp;
             return "Power saving mode is on. The maximum temperature is 25 degrees.";
+        }
+    }
+
+    energyUsage() {
+        if (this.temperature < 18) {
+            return "low-usage";
+        }
+        else if (this.temperature >= 18 && this.temperature < 25) {
+            return "medium-usage";
+        }
+        else {
+            return "high-usage";
         }
     }
 
