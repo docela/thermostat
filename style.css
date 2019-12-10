@@ -1,0 +1,22 @@
+body {
+
+}
+
+#buttons {
+    /* margin-top: 1rem; */
+    /* font-size: 100px; */
+}
+
+button {
+    padding: 2rem;
+}
+
+#reset {
+    background-color: #ff6666;
+}
+
+#reset, #increase, #decrease, #pso {
+    border-radius: 25%;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 15px;
+}
